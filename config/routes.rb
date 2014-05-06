@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   root :to => 'registration#index'
   devise_for :users
   resources :users
+=======
+  devise_for :users
+>>>>>>> 4bb93ef9da652b4c0c42ef2fc974963ea8c5aa98
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

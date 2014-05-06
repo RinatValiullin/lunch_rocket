@@ -14,5 +14,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+<<<<<<< HEAD
 
 /config/*.yml
+=======
+>>>>>>> 4bb93ef9da652b4c0c42ef2fc974963ea8c5aa98

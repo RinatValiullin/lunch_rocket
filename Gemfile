@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+<<<<<<< HEAD
 gem 'devise'
 
 gem 'cancancan'
@@ -48,3 +49,11 @@ gem 'pry-rails',  group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+=======
+gem 'bootstrap-sass'
+gem 'cancan'
+gem 'devise'
+gem 'figaro'
+gem 'rolify'
+gem 'simple_form'
+>>>>>>> 4bb93ef9da652b4c0c42ef2fc974963ea8c5aa98
