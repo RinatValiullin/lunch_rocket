@@ -7,17 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<<<<<<< HEAD
+
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "flash #{key}" %>
   <% end %>
 
   <%= yield %>
   <li><%= link_to "Sign_out", destroy_user_session_path, :method => :delete %></li>
-=======
 
-<%= yield %>
-
->>>>>>> 4bb93ef9da652b4c0c42ef2fc974963ea8c5aa98
 </body>
 </html>
