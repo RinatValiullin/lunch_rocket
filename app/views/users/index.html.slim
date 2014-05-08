@@ -1,0 +1,16 @@
+.span8
+  table.table.table-condensed.table-bordered
+    caption Users
+    thead
+      tr
+        th Email
+        th Registered
+        th Role
+        th
+    tbody
+      - @users.each do |user|
+        tr
+          td= unless (user.has_role? :admin); link_to user.email, user; else user.email; end
+          td= user.created_at.to_date
+          td= user.roles.map {|role| role.name.titlecase}.join(", ")
+          td= link_to("Delete user", user_path(user), :data =>   confirm=("Are you sure?" ) , :method => :delete, :class => 'btn btn-mini') unless (user == current_user) && (user.has_role? :admin)

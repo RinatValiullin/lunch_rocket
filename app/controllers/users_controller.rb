@@ -6,13 +6,20 @@ class UsersController < ApplicationController
   end
 
   def show
+    @roles = Role.all
   end
   
   def update
-    redirect_to users_path, :notice => "User updated."
+    @user = User.find(params[:id])
+    @user.roles = []
+    if params[:role]
+      params[:role].keys.each {|role| @user.add_role role}
+      redirect_to users_path, :notice => "User updated."
+    end
   end
     
   def destroy
+    user = User.find(params[:id])
     unless user == current_user
       user.destroy
       redirect_to users_path, :notice => "User deleted."

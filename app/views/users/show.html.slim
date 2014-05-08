@@ -1,0 +1,12 @@
+h3 User
+p
+= form_for @user do |f|
+  | Email: #{@user.email if @user.email}
+  br/
+  | Manager?    :  #{check_box_tag "role[manager]", "manager", @user.has_role?("manager")}
+  br/
+  | Deliver?    :  #{check_box_tag "role[deliver]", "deliver", @user.has_role?("deliver")}
+  br/
+  | User?    :  #{check_box_tag "role[user]", "user", @user.has_role?("user")}
+  br/
+  = f.submit 'Change role'
