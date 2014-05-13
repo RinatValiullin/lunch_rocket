@@ -1,11 +1,11 @@
-# User.create(email: '1@1.com', password: '1').add_role(:admin)
-# User.create(email: '2@2.com', password: '2').add_role(:manager)
-# User.create(email: '3@3.com', password: '3').add_role(:deliver)
-# User.create(email: '4@4.com', password: '4').add_role(:user)
+User.create(email: '1@1.com', password: '1').add_role(:admin)
+User.create(email: '2@2.com', password: '2').add_role(:manager)
+User.create(email: '3@3.com', password: '3').add_role(:deliver)
+User.create(email: '4@4.com', password: '4').add_role(:user)
 
 json = File.read("./Menu.json")
 menus = json.split("}]}")
-            number_of_file = 0
+number_of_file = 0
   menus.each_with_index do |menu, index_of_menu|
     list_of_dishes = []
     menu_after_parse = JSON.parse("#{menu}}]}")
@@ -29,13 +29,6 @@ menus = json.split("}]}")
     end
 end
 
-# orders = []
-# 100.times do
-#   order = Order.new
-#   order.status = "new"
-#   order.deliver_id = 1
-#   order.menus = [Menu.first, Menu.last]
-#   order.save!
-#   orders << order
-# end
-# User.last.orders = orders
+orders = []
+100.times { orders << Order.create(status: "new", deliver_id: 1, menus: [Menu.first, Menu.last]) }
+User.last.orders = orders
