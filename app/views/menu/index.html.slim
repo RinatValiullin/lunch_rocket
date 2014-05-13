@@ -1,0 +1,13 @@
+#main
+  #menus
+    - @menus.each do |menu|
+      #menu
+        h1 =menu.name
+        #menu_photos
+          a.image.border-img href="#" rel="gallery12" 
+            img alt="" src="#{menu.dishes.first.image.url}"
+          a.image.border-img href="#" rel="gallery12" 
+            img alt="" src="#{menu.dishes.second.image.url}"
+          a.image.border-img href="#" rel="gallery12" 
+            img alt="" src="#{menu.dishes.third.image.url}"
+        #menu_description
