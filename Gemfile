@@ -36,6 +36,10 @@ gem 'pry-rails',  group: :development
 gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'slim-rails'
+
+#for loading images
+gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

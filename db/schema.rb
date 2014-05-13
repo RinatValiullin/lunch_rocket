@@ -11,10 +11,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505123506) do
+ActiveRecord::Schema.define(version: 20140513102320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dishes", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+  end
+
+  create_table "dishes_menus", force: true do |t|
+    t.integer  "dish_id"
+    t.integer  "menu_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "dishes_menus", ["dish_id"], name: "index_dishes_menus_on_dish_id", using: :btree
+  add_index "dishes_menus", ["menu_id"], name: "index_dishes_menus_on_menu_id", using: :btree
+
+  create_table "menus", force: true do |t|
+    t.string   "name"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "menus_orders", force: true do |t|
+    t.integer "order_id"
+    t.integer "menu_id"
+  end
+
+  add_index "menus_orders", ["menu_id"], name: "index_menus_orders_on_menu_id", using: :btree
+  add_index "menus_orders", ["order_id"], name: "index_menus_orders_on_order_id", using: :btree
+
+  create_table "orders", force: true do |t|
+    t.integer  "user_id"
+    t.string   "status"
+    t.integer  "price"
+    t.integer  "deliver_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
