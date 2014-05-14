@@ -6,3 +6,21 @@ img {
     height: 120px;
     max-width: 165px;
 }
+.menu_description{
+  display: inline-block;
+  padding-bottom: 15px;
+  width: 400px;
+  vertical-align: middle;
+  td{
+    text-align: left
+  }
+}
+.menu{
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu_photos{
+  display: inline-block;
+  width: 600px;
+}

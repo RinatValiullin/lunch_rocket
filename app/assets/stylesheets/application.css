@@ -16,3 +16,7 @@
 h2#edit{
   align: center;
 }
+ul.list-group{
+  position: fixed;
+  width: 100px;
+}

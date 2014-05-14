@@ -1,7 +1,7 @@
 class MenuController < ApplicationController
 
 def index
-  @menus = Menu.all
+  @menus = Menu.paginate(:page => params[:page], per_page: 10)
 end
 
 end

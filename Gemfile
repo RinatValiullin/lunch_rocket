@@ -40,6 +40,9 @@ gem 'slim-rails'
 #for loading images
 gem 'carrierwave'
 
+#pagination
+gem 'will_paginate-bootstrap'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -11,4 +11,10 @@ html
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav style=("float: right") 
         = render 'layouts/navigation'
+  #bottom_nav_bar
+    ul.list-group
+      li.list-group-item
+        a href="/" Главная страница
+      li.list-group-item
+        a href="/menus" Список меню
   = yield
