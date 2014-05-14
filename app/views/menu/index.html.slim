@@ -18,6 +18,11 @@
                   td =dish.name
                   td =dish.description
               tr
-                td Цена 
-                td =menu.price 
+                td
+                  strong
+                    font color="#ff0000" Цена 
+                td 
+                  strong
+                    font color="#ff0000"
+                      =menu.price 
     = will_paginate @menus, renderer: BootstrapPagination::Rails
